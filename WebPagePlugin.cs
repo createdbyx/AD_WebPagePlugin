@@ -43,6 +43,14 @@ namespace AD_WebPagePlugin
             this.isRunning = false;
         }
 
+        public ApplicationModel Application
+        {
+            get
+            {
+                return this.applicationModel;
+            }
+        }
+
         public void Connect(ApplicationModel appModel)
         {
             this.applicationModel = appModel;
