@@ -1,9 +1,9 @@
-﻿using Codefarts.AutoDownloader;
-using System.ComponentModel.Composition;
-using Codefarts.AutoDownloader.Interfaces;
-
-namespace AD_WebPagePlugin
+﻿namespace AD_WebPagePlugin
 {
+    using System.ComponentModel.Composition;
+    using Codefarts.AutoDownloader;
+    using Codefarts.AutoDownloader.Interfaces;
+
     [Export(typeof(ISourcePlugin))]
     [SourcePlugin("Web Page")]
     public class WebPagePlugin : ISourcePlugin
