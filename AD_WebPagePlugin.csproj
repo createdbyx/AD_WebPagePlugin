@@ -12,8 +12,8 @@
     <ProjectGuid>{FDF4612F-E9F0-482E-8F5B-D89CC5A2702B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AD_WebPagePlugin</RootNamespace>
-    <AssemblyName>AD_WebPagePlugin</AssemblyName>
+    <RootNamespace>WebPagePluginADPlugin</RootNamespace>
+    <AssemblyName>WebPagePluginADPlugin</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -89,7 +89,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\AutoDownloader\bin\Debug\Plugins\$(ProjectName)\" /Y</PostBuildEvent>
+    <PostBuildEvent>rmdir /s /q "$(ProjectDir)..\AutoDownloader\bin\Debug\Plugins\$(ProjectName)\"
+xcopy "$(TargetDir)*.*" "$(ProjectDir)..\AutoDownloader\bin\Debug\Plugins\$(ProjectName)\" /Y</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
